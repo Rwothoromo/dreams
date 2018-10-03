@@ -31,4 +31,3 @@ class User:
 
 	def delete_list(self, int_p1):
 		return None
-
