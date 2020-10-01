@@ -40,20 +40,46 @@ Activate the virtual environment (Mac OS):
 source ../dreams-venv/bin/activate
 ```
 
-Install the dependencies required:
+To make sure you have all the required packages please run:
+
 
 ```bash
 #!/bin/bash
 pip install -r requirements.txt
 ```
-
-Now you can run /src/app.py to initiate the app:
+For Windows:
 
 ```bash
-#!/bin/bash
-python /src/app.py
+set FLASK_APP= app.py
 ```
 
+For MacOS:
+
+```bash
+export FLASK_APP= app.py
+```
+
+Next commands are common for all three platforms(i.e. Windows, MacOS and Linux):
+
+```bash
+flask db init
+
+flask db migrate -m "Any message of your choice"
+
+flask db upgrade
+```
+
+
+To run the app just execute one of following commands: Either:
+
+```bash
+python3 app.py
+```
+or:
+
+```bash
+flask run
+```
 This should initiate a flask web app running on port 8080 on your local host.
 
 ## Contributing
